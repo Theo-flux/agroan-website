@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Container from '../Global/Container'
 import NavItem from './NavItem'
 import SocialItem from './SocialItem'
+import Button from './Button'
+import Drop from './Drop'
 
 
 const NavContainer = styled.nav`
@@ -23,6 +25,7 @@ const NavContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 
     @media (max-width: 766px){
         .row {
@@ -42,6 +45,29 @@ const NavContent = styled.div`
         }
     }
     
+    .drop-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        aligh-items: center;
+        gap: 1em;
+        position: absolute;
+        top: 100px;
+        right: -100%;
+
+        .ri-close-line {
+            color: var(--White);
+            font-size: 1.2rem;
+            align-self: flex-end;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: rgba(256, 256, 256, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
     @media (min-width: 767px){
 
@@ -49,7 +75,8 @@ const NavContent = styled.div`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 55%;
+            width: 40%;
+            // border: 1px solid magenta;
         }
 
     }
@@ -91,11 +118,30 @@ const Menu = styled.div`
 function Navbar(){
 
     const [isToggled, setIsToggled] = useState(false)
+    const [showDrop, setShowDrop] = useState(false)
 	const menuItems = useRef(null)
+    const dropItems = useRef(null)
 
 	function changeToggler(){
 		setIsToggled(!isToggled)
 	}
+
+    function handleDrop(){
+        setShowDrop(!showDrop)
+    }
+
+    useEffect(() => {
+        if(showDrop){
+            if(isToggled){
+              setIsToggled(!isToggled)  
+            }
+            dropItems.current.style.right = '5%'
+            dropItems.current.style.transition = '.2s right linear'
+        }else{
+            dropItems.current.style.right = '-100%'
+            dropItems.current.style.transition = '.2s right linear'
+        }
+    },[showDrop, isToggled])
 
 	useEffect(()=>{
 		
@@ -123,8 +169,13 @@ function Navbar(){
                     </Menu>
 
                     <div className='row' ref={menuItems}>
-                        <SocialItem/>
                         <NavItem/>
+                        <Button onClick={() => handleDrop()} text="Account"/>
+                    </div>
+
+                    <div  className="drop-container" ref={dropItems}>
+                        <i onClick={() => handleDrop()} className="ri-close-line"></i>
+                        <Drop />
                     </div>
                 </NavContent>
             </Container>

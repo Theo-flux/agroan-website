@@ -33,11 +33,11 @@ function Services({}){
     return(
         <ServiceContainer>
             <Container>
-                <h2>Lorem ipsum dolor sit amet, consectetur </h2>
+                <h2>Your loan could be approved and available to you in three easy steps: </h2>
                 <ServiceFlex>
-                    <ServiceCard/>
-                    <ServiceCard bordered/>
-                    <ServiceCard/>
+                    <ServiceCard title="Create an account"/>
+                    <ServiceCard bordered title="Fill the form (application)"/>
+                    <ServiceCard title="Verify your financial credit history"/>
                 </ServiceFlex>
             </Container>
         </ServiceContainer>

@@ -58,11 +58,11 @@ function Hero(){
              <Container>
 
                 <HeroContent>
-                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <h1>Agricultural Business Loans</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Sapien commodo aliquam quis enim Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. Sapien commodo aliquam quis enim
+                            Agroan uses modern-day technologies to help you 
+                            secure the concessional funding needed to expand 
+                            your agro-business.
                         </p>
                         <CTA/>
                 </HeroContent>

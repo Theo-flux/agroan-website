@@ -1,19 +1,17 @@
 import styled from 'styled-components'
 
 const ItemContainer = styled.div`
-	padding: 2em 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 	gap: 1em;
-	width: 40%;
+	
 
 	@media (min-width: 767px){
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
-		width: 50%;
+		align-items: flex-end;
 	}
 	
 `
@@ -23,19 +21,22 @@ const Item = styled.a`
 	font-weight: 600;
 	font-size: 1.5rem;
 	cursor: pointer;
+	padding-left: 1em;
 
 	@media (min-width: 767px){
-		font-size: 1.2rem;
+		font-size: .875rem;
+		color: var(--White);
 	}
 
 	&:hover {
-		color: var(--White);
+		color: var(--Shade3);
 	}
 `
 
 function NavItem({ listener }) {
 	return(
 		<ItemContainer ref={listener}>
+			<Item>Home</Item>
 			<Item>About Us</Item>
 			<Item>Service</Item>
 			<Item>e-Naira</Item>

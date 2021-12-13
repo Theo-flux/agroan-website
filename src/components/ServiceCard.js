@@ -9,7 +9,7 @@ const ServiceCardContainer = styled.div`
     border-radius: 8px;
     border: ${props => props.bordered ? "2px solid var(--Shade3)": "none"};
     transition: .4s all ease-in;
-
+    cursor: pointer;
     &:hover {
         border: 2px solid var(--Shade3);
         box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
@@ -31,7 +31,7 @@ const ServiceCardContainer = styled.div`
 
     .title {
         color: var(--Shade1);
-        width: 100px;
+        width: 300px;
         font-weight: 800;
     }
 `
@@ -40,7 +40,7 @@ function ServiceCard(props){
     return (
         <ServiceCardContainer {...props}>
             <i className="ri-alarm-warning-fill"></i>
-            <p className="title">Lorem Ipsum dolor</p>
+            <p className="title">{props.title}</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien commodo aliquam quis </p>
         </ServiceCardContainer>
     )

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Agroan} from '../assets'
+import {FootImg} from '../assets'
 import SocialItem from './SocialItem'
 import Container from '../Global/Container'
 
@@ -11,18 +11,21 @@ const FooterContent = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	
 
 	h4 {
 		color: var(--White);
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		margin-bottom: 0;
 		text-align: center;
 	}
 
 	.flex-item {
+		width: 30%;
 		img {
-			width: 70%;
-			padding-top: 2em;
+			margin: 0 auto;
+			width: 100%;
+			padding-top: 1.5em;
 		}
 	}
 
@@ -34,9 +37,10 @@ const FooterContent = styled.div`
 
 		h4 {
 			text-align: left;
+			font-size: 1.5rem;
 		}
 		.flex-item {
-			width: 200px;
+			width: 150px;
 		}
 	}
 `
@@ -58,7 +62,7 @@ function Footer(){
 			<Container>
 				<FooterContent>
 					<div className="flex-item">
-						<img src={Agroan} alt=""/>
+						<img src={FootImg} alt=""/>
 						<div className='child-container'>
 							<Child>4b abc Street Ikeja, Lagos State</Child>
 							<Child>+(234) 801-234-5678</Child>
@@ -79,7 +83,7 @@ function Footer(){
 					<div className="flex-item">
 						<h4>Contact Us</h4>
 						<div className='child-container'>
-							<Child>Conatact Us</Child>
+							<Child>Contact Us</Child>
 							<Child>About Us</Child>
 						</div>
 					</div>
