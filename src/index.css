@@ -1,8 +1,24 @@
+:root {
+  /* Primary-Colors */
+  --Shade1: #358F80;
+  --Shade2: #99E2B4;
+  --Shade3: #56AB91;
+
+  /* Secondary-Colors */
+  --White: #ffffff;
+  --Black: #000000;
+  --Grey: #B3B3B3;
+}
+
+html,
+body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
