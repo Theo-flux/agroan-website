@@ -2,6 +2,11 @@
 import styled from 'styled-components'
 
 const Custombutton = styled.button`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	
 	background-color: ${props => props.primary ? "var(--Shade3)":"var(--White)"};
 	color: ${props => props.primary ? "white":"var(--Shade3)"};
 	font-weight: 500; 
@@ -12,6 +17,11 @@ const Custombutton = styled.button`
 	cursor: pointer;
 	border-radius: 5px;
 
+	i {
+		font-size: 1rem;
+		padding-right: .5em;
+	}
+	
 	&:hover {
         border: 1px solid var(--Shade3);
 		background-color: ${props => props.primary ? "white":"white"};
@@ -23,9 +33,10 @@ const Custombutton = styled.button`
 	}
 `
 
-export default function Button({text,...props}) {
+export default function Button({icon,text,...props}) {
 	return(
 		<Custombutton {...props}>
+			{icon ? <i class={icon}></i>: null}
 			{text}
 		</Custombutton>
 	)

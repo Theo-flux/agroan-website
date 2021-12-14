@@ -21,7 +21,8 @@ const FooterContent = styled.div`
 	}
 
 	.flex-item {
-		width: 30%;
+		width: 60%;
+
 		img {
 			margin: 0 auto;
 			width: 100%;
@@ -48,7 +49,7 @@ const Child = styled.p`
 	color: var(--White);
 	text-align: center;
 	font-size: .875rem;
-	max-width: 300px;
+	
 	@media (min-width: 967px){
 		text-align: left;
 	}
@@ -92,9 +93,7 @@ function Footer(){
 						<h4>About Us</h4>
 						<div className='child-container'>
 							<Child>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-								Sapien commodo aliquam quis enim Lorem ipsum dolor sit amet, 
-								consectetur adipiscing elit. Sapien commodo aliquam quis enim 
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 							</Child>
 						</div>
 					</div>

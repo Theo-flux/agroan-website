@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import Button from "./Button"
 
@@ -45,12 +46,27 @@ const Socials = styled.div`
          
     }
 `
-function Drop(props){
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    border: ${props => props.primary ? "none":"1px solid var(--Shade3)"};
+	box-shadow: ${props => props.primary ? "none":"0 3px 5px #99999930"};
+    background-color: ${props => props.primary ? "var(--Shade3)":"var(--White)"};
+	color: ${props => props.primary ? "white":"var(--Shade3)"};
+`
+function Drop({handleDrop}){
     return(
         <DropContainer>
-            <Button text="Login"/>
-            <Button primary text="Sign Up"/>
+            <StyledLink to='/Login' onClick={() => handleDrop()}>
+                Login
+            </StyledLink>
 
+            <StyledLink primary to='/Sign-Up' onClick={() => handleDrop()}>
+                Sign Up
+            </StyledLink>
+            
             <div className="bottom">
                 <button className="btn">Apply For Loan</button>
                 <Socials>

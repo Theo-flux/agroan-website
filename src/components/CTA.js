@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
-const CTAButton = styled.button`
+const StyledLink = styled(Link)`
     margin-top: 2em;
     width: 50%;
     padding: 1em;
@@ -9,7 +10,8 @@ const CTAButton = styled.button`
     border-radius: 5px;
     border: none;
     transition: .4s all ease-in;
-
+    text-align: center;
+    text-decoration: none;
     font-weight: 800;
     color: var(--White);
     font-size: 1rem;
@@ -23,10 +25,13 @@ const CTAButton = styled.button`
 
 function CTA(){
     return(
-        <CTAButton>
+        
+        <StyledLink to='/applynow'>
             Apply Now
-        </CTAButton>
+        </StyledLink>
+        
     )
 }
+
 
 export default CTA

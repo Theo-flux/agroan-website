@@ -5,6 +5,10 @@ import Leaves from './images/leaves.png'
 import Pig from './images/pig.png'
 import Poultry from './images/poultry.png'
 import Tractor from './images/tractor.png'
+import Girl from './images/girl.png'
+import Fruit from './images/fruit.png'
+import Fog from './images/fog.png'
+import Approved from './images/approved.png'
 
 export {
     Agroan,
@@ -13,6 +17,10 @@ export {
     Leaves,
     Pig,
     Poultry,
-    Tractor
+    Tractor,
+    Girl,
+    Fruit,
+    Fog,
+    Approved
 }
 

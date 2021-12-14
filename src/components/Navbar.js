@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Agroan } from '../assets'
 import styled from 'styled-components'
 import Container from '../Global/Container'
@@ -10,6 +11,8 @@ import Drop from './Drop'
 
 const NavContainer = styled.nav`
     position: fixed;
+    top: 0;
+    left: 0;
     padding: .5em 0;
     width: 100%;
     background: rgba(0, 0, 0, .60);
@@ -54,18 +57,20 @@ const NavContent = styled.div`
         position: absolute;
         top: 100px;
         right: -100%;
+        z-index: 99;
 
         .ri-close-line {
-            color: var(--White);
+            color: var(--Black);
             font-size: 1.2rem;
             align-self: flex-end;
             width: 40px;
             height: 40px;
             border-radius: 50px;
-            background-color: rgba(256, 256, 256, 0.2);
+            background-color: rgb(256, 256, 256);
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
         }
     }
 
@@ -75,7 +80,7 @@ const NavContent = styled.div`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 40%;
+            width: 60%;
             // border: 1px solid magenta;
         }
 
@@ -161,7 +166,9 @@ function Navbar(){
             <Container>
                 <NavContent>
                     <Logo>
-                        <img src={Agroan} alt="agroan-logo-svg"/>
+                        <Link to='/'>
+                            <img src={Agroan} alt="agroan-logo-svg"/>
+                        </Link>
                     </Logo>
 
                     <Menu>
@@ -169,13 +176,13 @@ function Navbar(){
                     </Menu>
 
                     <div className='row' ref={menuItems}>
-                        <NavItem/>
-                        <Button onClick={() => handleDrop()} text="Account"/>
+                        <NavItem changeToggler={changeToggler}/>
+                        <Button onClick={() => handleDrop()} icon='ri-account-circle-fill' text='Account'/>
                     </div>
 
                     <div  className="drop-container" ref={dropItems}>
                         <i onClick={() => handleDrop()} className="ri-close-line"></i>
-                        <Drop />
+                        <Drop handleDrop = {handleDrop}/>
                     </div>
                 </NavContent>
             </Container>

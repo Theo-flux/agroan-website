@@ -25,7 +25,7 @@ const Card = styled.div`
 `
 
 const TextArea = styled.div`
-    h3, 
+    h2, 
     p {
         text-align: center;
     }
@@ -33,7 +33,7 @@ const TextArea = styled.div`
     @media (min-width: 900px) {
         width: 40%; 
 
-        h3, 
+        h2, 
         p {
             text-align: left;
         }
@@ -46,7 +46,7 @@ function AboutCard(props){
     return(
         <Card {...props}>
             <TextArea>
-                <h3>Lorem ipsum</h3>
+                <h2>{props.title}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Sapien commodo aliquam quis enim Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit. Sapien commodo aliquam quis enim
