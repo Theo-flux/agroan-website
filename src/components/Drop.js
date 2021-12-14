@@ -52,7 +52,7 @@ const StyledLink = styled(Link)`
     text-align: center;
     border-radius: 5px;
     border: ${props => props.primary ? "none":"1px solid var(--Shade3)"};
-	box-shadow: ${props => props.primary ? "none":"0 3px 5px #99999930"};
+	box-shadow: 10px 10px 40px rgba(192, 197, 233, 0.6);
     background-color: ${props => props.primary ? "var(--Shade3)":"var(--White)"};
 	color: ${props => props.primary ? "white":"var(--Shade3)"};
 `
@@ -68,7 +68,7 @@ function Drop({handleDrop}){
             </StyledLink>
             
             <div className="bottom">
-                <button className="btn">Apply For Loan</button>
+                <button className="btn">Contact Us</button>
                 <Socials>
                     <i className="ri-youtube-fill"></i>
                     <i className="ri-instagram-fill"></i>
