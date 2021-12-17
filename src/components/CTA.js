@@ -26,7 +26,7 @@ const StyledLink = styled(Link)`
 function CTA(){
     return(
         
-        <StyledLink to='/applynow'>
+        <StyledLink to='/Login'>
             Apply Now
         </StyledLink>
         

@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { Girl } from "../assets"
 import SignupForm from "./SignupForm"
@@ -111,6 +111,35 @@ const   LeftSide = styled.div`
         height: 100%;
     }
 `
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--Black);
+
+    strong:hover {
+        text-decoration: underline;
+        color: var(--Shade3);
+    }
+`
+
+const StyledButton = styled(Link)`
+    display: flex;
+    justify-content: center;
+    // border: 1px solid magenta;
+    text-decoration: none;
+    color: var(--White);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    width: 90%;
+    padding: .8rem;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(250.79deg, #2B9B88 -4.87%, #045648 152.64%);
+    box-shadow: 0px 7px 9px rgba(10, 82, 70, 0.16);
+`
+
 function SignUp(){
     return(
         <Container>
@@ -122,8 +151,10 @@ function SignUp(){
                     </div>
                     <SignupForm/>
                     <div className="flex-container">
-                        <button className="btn-login">Create Account</button>
+                        <StyledButton to='/applynow'>Sign up</StyledButton>
                     </div>
+
+                    <StyledLink to='/Login'>Have an account? <strong>Login</strong></StyledLink>
                 </RightSide>
 
                 <LeftSide>

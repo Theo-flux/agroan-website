@@ -38,7 +38,7 @@ const ModalContent = styled.div`
 `
 const Btn = styled.button`
     width: 100%;
-    padding: .5em;
+    padding: .8em;
     background: linear-gradient(250.79deg, #2B9B88 -4.87%, #045648 152.64%);
     box-shadow: 0px 7px 9px rgba(10, 82, 70, 0.16);
     border-radius: 5px;

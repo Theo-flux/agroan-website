@@ -25,6 +25,7 @@ const SocialContainer = styled.div`
             color: var(--White);
         }
     }
+    
 `
 
 function SocialItem(){

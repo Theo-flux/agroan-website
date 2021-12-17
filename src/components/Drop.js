@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import Button from "./Button"
-
 
 const DropContainer = styled.div `
     display: flex;
